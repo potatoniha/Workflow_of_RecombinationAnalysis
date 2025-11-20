@@ -5,7 +5,38 @@ program you need to carry out:
 3. LDhat/rhomap
 4. vcftools
 5. bcftools
-
+___
 **WorkFlow0_download**
 Input: 
 1. Chr_List: the list of all contig, which can be found in vcf ID column
+2. INPUT_VCF: the total vcf file of your program
+
+Output:
+1. OUTPUT_VCF: the vcf file divided by chrom
+This Program can make the vcf divided by the chrom.
+The Chr_List is not necessary, because you can get it directly in vcf ID, but it is recommended.
+___
+**WorkFlow1_randomdivide**
+Input:
+1. INPUT_VCF: the total vcf file of your program
+
+Output:
+1. all_samples: all the query in INPUT_VCF
+2. group_*: the random division by shuf
+3. OUTPUT_VCF: the chrom vcf file divided by group file
+
+It is not necessary if your vcf has query less than 320. You can make a likelihood in **WorkFlow2.5_lkgenerate** Because the biggest likelihood I have only is n=320, the likelihood generation velocity is low.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
